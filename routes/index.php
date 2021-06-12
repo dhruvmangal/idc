@@ -301,7 +301,35 @@ switch($request){
 		$oneway = new OnewayFairController();
 		$res= $oneway->delete($_POST);
 		echo json_encode($res);
-		break;	
+		break;
+
+	case '/pot/onewaynote/create/':
+		require_once 'controller/onewayNoteController.php';	
+		$oneway = new OnewayNoteController();
+		$res= $oneway->create($_POST);
+		echo json_encode($res);
+		break;
+
+	case '/pot/onewaynote/view/':
+		require_once 'controller/onewayNoteController.php';	
+		$oneway = new OnewayNoteController();
+		$res= $oneway->view($_POST);
+		echo json_encode($res);
+		break;
+
+	case '/pot/onewaynote/update/':
+		require_once 'controller/onewayNoteController.php';	
+		$oneway = new OnewayNoteController();
+		$res= $oneway->update($_POST);
+		echo json_encode($res);
+		break;
+
+	case '/pot/onewaynote/delete/':
+		require_once 'controller/onewayNoteController.php';	
+		$oneway = new OnewayNoteController();
+		$res= $oneway->delete($_POST);
+		echo json_encode($res);
+		break;		
 	
 	/* oneway ends */
 	
